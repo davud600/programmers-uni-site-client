@@ -23,42 +23,48 @@ const Main = (props: IMainProps) => {
       {props.meta}
 
       <div className="mx-auto">
-        <div className="border-b border-gray-300 p-7">
-          <div className="flex w-full justify-end pr-7">
-            <button
-              className="block h-6 w-6 text-xl md:hidden"
-              onClick={handleMenuButtonClick}
+        <div className="flex justify-between border-b border-gray-300 p-7">
+          <span>Logo</span>
+          <div>
+            <div className="flex w-full justify-end pr-7">
+              <button
+                className="block h-6 w-6 text-xl md:hidden"
+                onClick={handleMenuButtonClick}
+              >
+                <FontAwesomeIcon icon={faBars} />
+              </button>
+            </div>
+            <div
+              ref={menu}
+              className="hidden h-screen w-full flex-col text-end md:flex md:h-auto"
             >
-              <FontAwesomeIcon icon={faBars} />
-            </button>
-          </div>
-          <div ref={menu} className="hidden w-full flex-col text-end md:flex">
-            <ul className="mt-12 mr-5 flex-wrap gap-5 text-xl md:mt-0 md:flex md:justify-end md:gap-10 lg:gap-20">
-              <li>
-                <Link
-                  href="/"
-                  className="border-none text-gray-700 hover:text-gray-900"
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/about/"
-                  className="border-none text-gray-700 hover:text-gray-900"
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact/"
-                  className="border-none text-gray-700 hover:text-gray-900"
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
+              <ul className="mt-12 mr-5 flex-wrap gap-5 text-xl md:mt-0 md:flex md:justify-end md:gap-10 lg:gap-20">
+                <li>
+                  <Link
+                    href="/"
+                    className="border-none text-gray-700 hover:text-gray-900"
+                  >
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/about/"
+                    className="border-none text-gray-700 hover:text-gray-900"
+                  >
+                    About
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/contact/"
+                    className="border-none text-gray-700 hover:text-gray-900"
+                  >
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
