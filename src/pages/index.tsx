@@ -13,8 +13,8 @@ const Index = () => {
         />
       }
     >
-      <section className="flex flex-col md:flex-row">
-        <div className="p-5 text-center md:p-14 md:text-start">
+      <section className="flex flex-col pb-0 md:flex-row md:pb-28">
+        <div className="py-8 px-4 text-center md:p-14 md:text-start">
           <div>
             <span className="text-6xl font-semibold">Hello</span>
           </div>
@@ -25,7 +25,7 @@ const Index = () => {
             </p>
           </div>
           <div className="mt-14">
-            <button className="rounded bg-blue-500 py-2 px-4 font-bold text-white hover:bg-blue-700">
+            <button className="mr-2 mb-2 rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 px-6 py-3 text-center text-lg font-medium text-white hover:bg-gradient-to-bl focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800">
               Get Started
             </button>
           </div>
