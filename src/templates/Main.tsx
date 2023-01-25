@@ -22,7 +22,8 @@ const Main = (props: IMainProps) => {
   function handleMenuButtonClick() {
     setNavbarOpen((prev) => !prev);
     menu.current.classList.toggle('hidden');
-    menu.current.classList.toggle('mt-24');
+    menu.current.classList.toggle('mt-20');
+    // menu.current.classList.toggle('translate-x-96');
   }
 
   return (
@@ -30,7 +31,7 @@ const Main = (props: IMainProps) => {
       {props.meta}
 
       <div className="mx-auto">
-        <nav className="m-0 flex justify-between px-10 py-6 sm:px-16 sm:py-8 md:px-20 md:py-12">
+        <nav className="m-0 flex justify-between px-4 py-6 sm:p-8 md:px-20 md:py-12">
           <div className="flex">
             <Image
               className="mb-auto w-16 cursor-pointer object-contain md:w-24"
@@ -60,9 +61,10 @@ const Main = (props: IMainProps) => {
             </div>
             <div
               ref={menu}
-              className="hidden h-screen w-full flex-col text-end md:flex md:h-auto"
+              className="hidden h-screen w-full flex-col text-end transition-all md:flex md:h-auto"
             >
-              <ul className="mt-12 mr-5 flex flex-col flex-wrap gap-16 text-2xl font-medium md:mt-0 md:flex-row md:justify-end md:gap-10 md:text-xl lg:gap-20">
+              <ul className="mt-12 mr-3 flex flex-col gap-5 text-2xl font-medium md:mt-0 md:flex-row md:justify-end md:gap-10 md:text-xl lg:gap-20">
+                <hr className="-ml-96 border border-gray-300 md:hidden" />
                 <li>
                   <Link href="/" className="border-none">
                     <span
@@ -74,6 +76,7 @@ const Main = (props: IMainProps) => {
                     </span>
                   </Link>
                 </li>
+                <hr className="-ml-96 border border-gray-300 md:hidden" />
                 <li>
                   <Link
                     href="/about/"
@@ -88,6 +91,7 @@ const Main = (props: IMainProps) => {
                     </span>
                   </Link>
                 </li>
+                <hr className="-ml-96 border border-gray-300 md:hidden" />
                 <li>
                   <Link
                     href="/contact/"
@@ -102,6 +106,7 @@ const Main = (props: IMainProps) => {
                     </span>
                   </Link>
                 </li>
+                <hr className="-ml-96 border border-gray-300 md:hidden" />
               </ul>
             </div>
           </div>
@@ -170,7 +175,7 @@ const Main = (props: IMainProps) => {
             <span className="mx-8 text-sm text-gray-200 opacity-60 sm:text-center md:mx-0">
               © Copyright {new Date().getFullYear()} {AppConfig.title}.{' '}
             </span>
-            <div className="flex">
+            <div className="mt-4 flex md:m-0">
               <a href="#" className="footer-sm-link">
                 <FontAwesomeIcon
                   icon={faInstagram}
