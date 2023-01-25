@@ -12,10 +12,70 @@ a:hover {
 
 @tailwind utilities;
 
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+}
+
+.footer-sm-link {
+  text-decoration: none !important;
+  all: unset !important;
+}
+
+.link-underline {
+  border-bottom-width: 0;
+  background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+  background-size: 0 2.5px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: all .2s ease;
+}
+
+.link-underline-black {
+  background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+}
+
+@media (min-width: 768px) {
+  .link-underline-black {
+    background-image: linear-gradient(transparent, transparent), linear-gradient(#991b1b, #991b1b);
+  }
+}
+
+.link-underline:hover {
+  background-size: 100% 2.5px;
+  background-position: 0 100%;
+}
+
+.link-active {
+  background-size: 100% 2.5px;
+  background-position: 0 100%;
+  color: rgb(153 27 27);
+}
+
 .content p {
   @apply my-6;
 }
 
 .content ul {
   @apply my-6;
+}
+
+.text-stroke {
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.text-fill {
+  -webkit-text-fill-color: black;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
