@@ -4,8 +4,8 @@ import { Main } from '@/templates/Main';
 const Contact = () => {
   return (
     <Main meta={<Meta title="Contact us" description="Contact us via email" />}>
-      <section className="flex justify-center py-14">
-        <h1>coming soon...</h1>
+      <section id="contact-section" className="flex justify-center">
+        <h1 className="text-white">coming soon...</h1>
       </section>
     </Main>
   );
