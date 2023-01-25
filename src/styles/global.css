@@ -1,5 +1,11 @@
 @tailwind base;
 
+body {
+  background: url("../../public/assets/images/background.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
 a {
   @apply text-blue-700;
 }
@@ -78,4 +84,8 @@ h6 {
   -webkit-text-fill-color: black;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
+}
+
+.logo-footer {
+  filter: grayscale(1) contrast(2) brightness(0.8);
 }

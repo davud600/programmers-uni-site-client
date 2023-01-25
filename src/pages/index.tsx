@@ -11,8 +11,8 @@ const Index = () => {
         />
       }
     >
-      <section className="flex justify-center py-14">
-        <h1>coming soon...</h1>
+      <section id="home-section" className="mb-96 flex justify-center">
+        <h1 className="text-white">coming soon...</h1>
       </section>
     </Main>
   );

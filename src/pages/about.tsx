@@ -5,8 +5,8 @@ const About = () => (
   <Main
     meta={<Meta title="About us" description="About Programmer's University" />}
   >
-    <section className="flex justify-center py-14">
-      <h1>coming soon...</h1>
+    <section id="about-section" className="flex justify-center">
+      <h1 className="text-white">coming soon...</h1>
     </section>
   </Main>
 );

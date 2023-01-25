@@ -23,7 +23,6 @@ const Main = (props: IMainProps) => {
     setNavbarOpen((prev) => !prev);
     menu.current.classList.toggle('hidden');
     menu.current.classList.toggle('mt-20');
-    // menu.current.classList.toggle('translate-x-96');
   }
 
   return (
@@ -36,19 +35,19 @@ const Main = (props: IMainProps) => {
             <Image
               className="mb-auto w-16 cursor-pointer object-contain md:w-24"
               src="/assets/images/logo.svg"
-              height={75}
-              width={75}
+              height={1000}
+              width={1000}
               alt="Not Found"
               quality={100}
             />
-            <div className="ml-3 flex flex-col font-bold sm:mt-1 md:mt-3">
+            {/* <div className="ml-3 flex flex-col font-bold sm:mt-1 md:mt-3">
               <h1 className="hidden sm:block sm:text-xl md:text-2xl">
                 Programmer&apos;s
               </h1>
               <h1 className="hidden sm:block sm:text-xl md:text-2xl">
                 University
               </h1>
-            </div>
+            </div> */}
           </div>
           <div className="mt-4">
             <div className="flex w-full justify-end pr-7">
@@ -63,7 +62,7 @@ const Main = (props: IMainProps) => {
               ref={menu}
               className="hidden h-screen w-full flex-col text-end transition-all md:flex md:h-auto"
             >
-              <ul className="mt-12 mr-3 flex flex-col gap-5 text-2xl font-medium md:mt-0 md:flex-row md:justify-end md:gap-10 md:text-xl lg:gap-20">
+              <ul className="mt-12 mr-3 flex flex-col gap-5 text-lg font-medium md:mt-0 md:flex-row md:justify-end md:gap-10 md:text-xl lg:gap-20">
                 <hr className="-ml-96 border border-gray-300 md:hidden" />
                 <li>
                   <Link href="/" className="border-none">
@@ -116,18 +115,18 @@ const Main = (props: IMainProps) => {
           <div className="content py-5 text-xl">{props.children}</div>
         )}
 
-        <footer className="bg-red-900 py-6 px-8 sm:px-20 md:px-24">
+        <footer className="mt-48 bg-red-900 py-6 px-8 sm:px-20 md:px-24">
           <div className="md:flex md:justify-between">
             <div className="mb-6 flex items-center md:mb-0">
               <Image
-                src="/assets/images/logo-footer.png"
-                className="mr-3 w-14 md:w-16"
+                src="/assets/images/logo.svg"
+                className="logo-footer mr-3 w-14 md:w-16"
                 alt="Programmer's University Logo"
-                width={30}
-                height={30}
+                width={1000}
+                height={1000}
                 quality={100}
               />
-              <div className="ml-1 mt-1 flex flex-col font-bold text-gray-200">
+              <div className="ml-1 mt-1 flex flex-col font-bold text-gray-300">
                 <h1 className="text-lg">Programmer&apos;s</h1>
                 <h1 className="text-lg">University</h1>
               </div>
