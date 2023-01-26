@@ -1,10 +1,15 @@
 @tailwind base;
 
-body {
+/* body {
   background: url("../../public/assets/images/background.svg");
   background-repeat: no-repeat;
   background-size: 100%;
-}
+  filter: grayscale(1) contrast(2) brightness(0.8);
+} */
+
+/* body {
+  overflow-x: hidden;
+} */
 
 a {
   @apply text-blue-700;
@@ -88,4 +93,175 @@ h6 {
 
 .logo-footer {
   filter: grayscale(1) contrast(2) brightness(0.8);
+}
+
+.wrapper {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  perspective: 10px;
+}
+
+.main-hexagons {
+  width: 600px;
+}
+
+@media (min-width: 900px) {
+  .main-hexagons {
+    width: 66vw;
+  }
+}
+
+.small-hexagons {
+  position: relative;
+  transform-style: preserve-3d;
+  z-index: 10;
+}
+
+.hexagon-one {
+  top: 10rem;
+  right: -8rem;
+  transform: scale(1.5) translateZ(-6px) rotate(12deg);
+}
+
+.hexagon-two {
+  top: 0rem;
+  right: 20rem;
+  transform: scale(1.5) translateZ(-12px) rotate(12deg);
+}
+
+.hexagon-three {
+  top: 30rem;
+  right: 32rem;
+  transform: scale(1.5) translateZ(-8px) rotate(12deg);
+}
+
+.hexagon-four {
+  top: 50rem;
+  right:30rem;
+  transform: scale(1.5) translateZ(-12px) rotate(12deg);
+}
+
+.hexagon-five {
+  top: 20rem;
+  right: 0rem;
+  transform: scale(1.5) translateZ(-9px) rotate(12deg);
+}
+
+.hexagon-six {
+  top: 50rem;
+  right: 0rem;
+  transform: scale(1.5) translateZ(-4px) rotate(12deg);
+}
+
+.hexagon-seven {
+  bottom: -85rem;
+  right: 0rem;
+  transform: scale(1.5) translateZ(-4px) rotate(12deg);
+}
+
+.hexagon-eight {
+  bottom: -70rem;
+  left: 0rem;
+  transform: scale(1.5) translateZ(-4px) rotate(12deg);
+}
+
+@media (min-width: 640px) {
+  .hexagon-one {
+    top: 10rem;
+    right: -8rem;
+    transform: scale(1.6) translateZ(-6px) rotate(12deg);
+  }
+
+  .hexagon-two {
+    top: 0rem;
+    right: 44rem;
+    transform: scale(1.6) translateZ(-12px) rotate(12deg);
+  }
+
+  .hexagon-three {
+    top: 30rem;
+    right: 40rem;
+    transform: scale(1.6) translateZ(-8px) rotate(12deg);
+  }
+
+  .hexagon-four {
+    top: 50rem;
+    right: 90rem;
+    transform: scale(1.6) translateZ(-12px) rotate(12deg);
+  }
+
+  .hexagon-five {
+    top: 20rem;
+    right: 0rem;
+    transform: scale(1.6) translateZ(-9px) rotate(12deg);
+  }
+
+  .hexagon-six {
+    top: 50rem;
+    right: -10rem;
+    transform: scale(1.6) translateZ(-4px) rotate(12deg);
+  }
+
+  .hexagon-seven {
+    bottom: -85rem;
+    right: 0rem;
+    transform: scale(1.6) translateZ(-4px) rotate(12deg);
+  }
+
+  .hexagon-eight {
+    bottom: -70rem;
+    left: 0rem;
+    transform: scale(1.6) translateZ(-4px) rotate(12deg);
+  }
+}
+
+@media (min-width: 768px) {
+  .hexagon-one {
+    top: 10rem;
+    right: -10rem;
+    transform: scale(1.75) translateZ(-6px) rotate(12deg);
+  }
+  
+  .hexagon-two {
+    top: 0rem;
+    right: 50rem;
+    transform: scale(1.75) translateZ(-12px) rotate(12deg);
+  }
+  
+  .hexagon-three {
+    top: 23rem;
+    right: 110rem;
+    transform: scale(1.75) translateZ(-8px) rotate(12deg);
+  }
+  
+  .hexagon-four {
+    top: 50rem;
+    right: 90rem;
+    transform: scale(1.75) translateZ(-12px) rotate(12deg);
+  }
+  
+  .hexagon-five {
+    top: 20rem;
+    right: 0rem;
+    transform: scale(1.75) translateZ(-9px) rotate(12deg);
+  }
+  
+  .hexagon-six {
+    top: 50rem;
+    right: -15rem;
+    transform: scale(1.75) translateZ(-4px) rotate(12deg);
+  }
+  
+  .hexagon-seven {
+    bottom: -85rem;
+    right: 0rem;
+    transform: scale(1.75) translateZ(-4px) rotate(12deg);
+  }
+  
+  .hexagon-eight {
+    bottom: -70rem;
+    left: 0rem;
+    transform: scale(1.75) translateZ(-4px) rotate(12deg);
+  }
 }
