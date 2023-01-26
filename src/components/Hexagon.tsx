@@ -48,15 +48,16 @@ const Hexagon = ({
 
   let rotationAmount = initialRotation;
   let lastScroll = 0;
-  const rotationSpeed = 1;
+  const rotationSpeed = Math.random() * 1.5;
+  const rotationDir = Math.random() >= 0.5 ? -1 : 1;
   const threshold = 0.5;
   let scale = 1.75;
 
   const handleScroll = () => {
     rotationAmount +=
       wrapper.current.scrollTop - lastScroll > threshold
-        ? -rotationSpeed
-        : rotationSpeed;
+        ? -rotationSpeed * rotationDir
+        : rotationSpeed * rotationDir;
 
     lastScroll = wrapper.current.scrollTop;
 

@@ -1,5 +1,4 @@
 import { faInstagram, faTiktok } from '@fortawesome/free-brands-svg-icons';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -23,8 +22,6 @@ const Main = (props: IMainProps) => {
 
   const handleMenuButtonClick = () => {
     setNavbarOpen((prev) => !prev);
-    menu.current.classList.toggle('hidden');
-    menu.current.classList.toggle('mt-20');
   };
 
   return (
@@ -121,71 +118,114 @@ const Main = (props: IMainProps) => {
               </h1>
             </div>
           </div>
-          <div className="mt-4">
-            <div className="flex w-full justify-end pr-7">
-              <button
-                className="block h-6 w-6 text-xl md:hidden"
-                onClick={handleMenuButtonClick}
-              >
-                <FontAwesomeIcon icon={faBars} />
-              </button>
-            </div>
-            <div
-              ref={menu}
-              className="hidden h-screen w-full flex-col text-end transition-all md:flex md:h-auto"
+
+          <div className="relative md:hidden">
+            <input type="checkbox" id="menyAvPaa" />
+            <label
+              id="burger"
+              htmlFor="menyAvPaa"
+              onClick={handleMenuButtonClick}
             >
-              <ul className="mt-12 mr-3 flex flex-col gap-5 text-lg font-medium md:mt-0 md:flex-row md:justify-end md:gap-10 md:text-xl lg:gap-20">
-                <hr className="-ml-96 border border-gray-300 md:hidden" />
+              <div></div>
+              <div></div>
+              <div></div>
+            </label>
+            <div id="meny">
+              <ul className="absolute right-0 flex w-screen flex-col items-center gap-6 py-36 text-2xl">
                 <li>
                   <Link href="/" className="border-none">
                     <span
-                      className={`link-underline link-underline-black text-gray-700 hover:text-red-800 ${
-                        router.pathname === '/' ? 'link-active' : ''
+                      className={`font-medium text-gray-200 hover:text-red-600 ${
+                        router.pathname === '/' ? 'text-red-600' : ''
                       }`}
                     >
                       Home
                     </span>
                   </Link>
                 </li>
-                <hr className="-ml-96 border border-gray-300 md:hidden" />
                 <li>
-                  <Link
-                    href="/about/"
-                    className="border-none text-gray-700 hover:text-gray-900"
-                  >
+                  <Link href="/about/" className="border-none">
                     <span
-                      className={`link-underline link-underline-black text-gray-700 hover:text-red-800 ${
-                        router.pathname === '/about' ? 'link-active' : ''
+                      className={`font-medium text-gray-200 hover:text-red-600 ${
+                        router.pathname === '/about' ? 'text-red-600' : ''
                       }`}
                     >
                       About
                     </span>
                   </Link>
                 </li>
-                <hr className="-ml-96 border border-gray-300 md:hidden" />
                 <li>
-                  <Link
-                    href="/contact/"
-                    className="border-none text-gray-700 hover:text-gray-900"
-                  >
+                  <Link href="/contact/" className="border-none">
                     <span
-                      className={`link-underline link-underline-black text-gray-700 hover:text-red-800 ${
-                        router.pathname === '/contact' ? 'link-active' : ''
+                      className={`font-medium text-gray-200 hover:text-red-600 ${
+                        router.pathname === '/contact' ? 'text-red-600' : ''
                       }`}
                     >
                       Contact
                     </span>
                   </Link>
                 </li>
-                <hr className="-ml-96 border border-gray-300 md:hidden" />
               </ul>
             </div>
+          </div>
+
+          <div
+            ref={menu}
+            className="hidden w-full flex-col text-end transition-all md:flex"
+          >
+            <ul className="mt-12 mr-3 flex flex-col gap-5 text-lg font-medium md:mt-0 md:flex-row md:justify-end md:gap-10 md:text-xl lg:gap-20">
+              <hr className="-ml-96 border border-gray-300 md:hidden" />
+              <li>
+                <Link href="/" className="border-none">
+                  <span
+                    className={`link-underline link-underline-black text-gray-700 hover:text-red-800 ${
+                      router.pathname === '/' ? 'link-active' : ''
+                    }`}
+                  >
+                    Home
+                  </span>
+                </Link>
+              </li>
+              <hr className="-ml-96 border border-gray-300 md:hidden" />
+              <li>
+                <Link
+                  href="/about/"
+                  className="border-none text-gray-700 hover:text-gray-900"
+                >
+                  <span
+                    className={`link-underline link-underline-black text-gray-700 hover:text-red-800 ${
+                      router.pathname === '/about' ? 'link-active' : ''
+                    }`}
+                  >
+                    About
+                  </span>
+                </Link>
+              </li>
+              <hr className="-ml-96 border border-gray-300 md:hidden" />
+              <li>
+                <Link
+                  href="/contact/"
+                  className="border-none text-gray-700 hover:text-gray-900"
+                >
+                  <span
+                    className={`link-underline link-underline-black text-gray-700 hover:text-red-800 ${
+                      router.pathname === '/contact' ? 'link-active' : ''
+                    }`}
+                  >
+                    Contact
+                  </span>
+                </Link>
+              </li>
+              <hr className="-ml-96 border border-gray-300 md:hidden" />
+            </ul>
           </div>
         </nav>
 
         {!navbarOpen && (
           <div className="content py-5 text-xl">{props.children}</div>
         )}
+
+        {navbarOpen && <div className="py-44 sm:py-40"></div>}
 
         <footer className="mt-48 bg-red-900 py-6 px-8 sm:px-20 md:px-24">
           <div className="md:flex md:justify-between">
