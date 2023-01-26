@@ -48,7 +48,8 @@ const Hexagon = ({
 
   let rotationAmount = initialRotation;
   let lastScroll = 0;
-  const rotationSpeed = Math.random() * 1.5;
+  const randomNum = Math.random();
+  const rotationSpeed = randomNum * 1.5 < 0.6 ? randomNum * 2 : randomNum * 1.5;
   const rotationDir = Math.random() >= 0.5 ? -1 : 1;
   const threshold = 0.5;
   let scale = 1.75;
