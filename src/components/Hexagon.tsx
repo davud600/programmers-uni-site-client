@@ -36,15 +36,17 @@ const Hexagon = ({
   wrapper,
   classes,
   z,
+  initialRotation,
 }: {
   wrapper: any;
   classes: string;
   z: number;
+  initialRotation: number;
 }) => {
   const smallHexagon = useRef<any>();
   const size = useWindowSize();
 
-  let rotationAmount = 12; // initial rotation
+  let rotationAmount = initialRotation;
   let lastScroll = 0;
   const rotationSpeed = 1;
   const threshold = 0.5;
