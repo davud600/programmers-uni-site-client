@@ -138,13 +138,13 @@ h6 {
 
 .hexagon-three {
   top: 30rem;
-  right: 32rem;
+  right: 25rem;
   transform: scale(1.5) translateZ(-8px) rotate(12deg);
 }
 
 .hexagon-four {
   top: 50rem;
-  right:30rem;
+  right: 20rem;
   transform: scale(1.5) translateZ(-12px) rotate(12deg);
 }
 
