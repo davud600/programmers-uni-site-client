@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 import type { ReactNode } from 'react';
 import { useRef, useState } from 'react';
 
+import Hexagon from '@/components/Hexagon';
 import { AppConfig } from '@/utils/AppConfig';
 
 type IMainProps = {
@@ -16,38 +17,69 @@ type IMainProps = {
 
 const Main = (props: IMainProps) => {
   const menu = useRef<any>();
+  const wrapper = useRef<any>();
   const [navbarOpen, setNavbarOpen] = useState(false);
   const router = useRouter();
 
-  function handleMenuButtonClick() {
+  const handleMenuButtonClick = () => {
     setNavbarOpen((prev) => !prev);
     menu.current.classList.toggle('hidden');
     menu.current.classList.toggle('mt-20');
-  }
+  };
 
   return (
-    <div className="w-full text-gray-700 antialiased">
+    <div ref={wrapper} className="wrapper w-full text-gray-700 antialiased">
       {props.meta}
 
-      <div className="mx-auto">
+      <div>
+        <Image // w-8/12
+          className="main-hexagons absolute -top-40 -left-20 -z-10 -rotate-12 md:-top-72"
+          src="/assets/images/hexagon.svg"
+          height={2000}
+          width={2000}
+          alt="Not Found"
+          quality={100}
+        />
+        <Image
+          className="main-hexagons absolute -right-28 top-60 -z-10 -rotate-12 opacity-5 md:right-0 md:top-72"
+          src="/assets/images/hexagon-black.svg"
+          height={2000}
+          width={2000}
+          alt="Not Found"
+          quality={100}
+        />
+      </div>
+
+      <div className="small-hexagons">
+        <Hexagon z={-6} wrapper={wrapper} classes="hexagon-one w-16" />
+        <Hexagon z={-12} wrapper={wrapper} classes="hexagon-two w-20" />
+        <Hexagon z={-8} wrapper={wrapper} classes="hexagon-three w-20" />
+        <Hexagon z={-12} wrapper={wrapper} classes="hexagon-four w-20" />
+        <Hexagon z={-9} wrapper={wrapper} classes="hexagon-five w-20" />
+        <Hexagon z={-4} wrapper={wrapper} classes="hexagon-six w-20" />
+        <Hexagon z={-4} wrapper={wrapper} classes="hexagon-seven w-16" />
+        <Hexagon z={-7} wrapper={wrapper} classes="hexagon-eight w-20" />
+      </div>
+
+      <div className="relative mx-auto">
         <nav className="m-0 flex justify-between px-4 py-6 sm:p-8 md:px-20 md:py-12">
           <div className="flex">
             <Image
-              className="mb-auto w-16 cursor-pointer object-contain md:w-24"
+              className="mb-auto w-16 cursor-pointer object-contain md:w-28"
               src="/assets/images/logo.svg"
               height={1000}
               width={1000}
               alt="Not Found"
               quality={100}
             />
-            {/* <div className="ml-3 flex flex-col font-bold sm:mt-1 md:mt-3">
-              <h1 className="hidden sm:block sm:text-xl md:text-2xl">
+            <div className="ml-3 flex flex-col font-bold sm:mt-1 md:mt-4">
+              <h1 className="hidden text-white sm:block sm:text-xl md:text-2xl">
                 Programmer&apos;s
               </h1>
-              <h1 className="hidden sm:block sm:text-xl md:text-2xl">
+              <h1 className="hidden text-white sm:block sm:text-xl md:text-2xl">
                 University
               </h1>
-            </div> */}
+            </div>
           </div>
           <div className="mt-4">
             <div className="flex w-full justify-end pr-7">
