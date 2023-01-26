@@ -42,6 +42,7 @@ h6 {
 }
 
 .link-underline {
+  padding-bottom: 4px;
   border-bottom-width: 0;
   background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
   background-size: 0 2.5px;
@@ -55,6 +56,11 @@ h6 {
 }
 
 @media (min-width: 768px) {
+  .link-underline {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  
   .link-underline-black {
     background-image: linear-gradient(transparent, transparent), linear-gradient(#991b1b, #991b1b);
   }
