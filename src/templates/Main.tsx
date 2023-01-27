@@ -22,10 +22,14 @@ const Main = (props: IMainProps) => {
 
   const handleMenuButtonClick = () => {
     setNavbarOpen((prev) => !prev);
+    wrapper.current.classList.toggle('!overflow-hidden');
   };
 
   return (
-    <div ref={wrapper} className="wrapper w-full text-gray-700 antialiased">
+    <div
+      ref={wrapper}
+      className="wrapper w-full overflow-y-hidden text-gray-700 antialiased"
+    >
       {props.meta}
 
       <div>
