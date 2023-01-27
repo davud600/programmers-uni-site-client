@@ -17,6 +17,20 @@ a:hover {
   -moz-osx-font-smoothing: grayscale;
 }
 
+section {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  min-height: 100vh;
+}
+
+.stroke-text {
+  color: black;
+  -webkit-text-fill-color: #7c1919; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: .5px;
+  -webkit-text-stroke-color: black;
+}
+
 .footer-sm-link {
   text-decoration: none !important;
   all: unset !important;

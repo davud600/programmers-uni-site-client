@@ -113,11 +113,11 @@ const Main = (props: IMainProps) => {
               alt="Not Found"
               quality={100}
             />
-            <div className="ml-3 flex flex-col font-bold sm:mt-1 md:mt-4">
-              <h1 className="hidden text-white sm:block sm:text-xl md:text-2xl">
+            <div className="ml-3 flex flex-col sm:mt-1 md:mt-6">
+              <h1 className="stroke-text -mb-2 hidden font-extrabold text-white sm:block sm:text-xl md:text-2xl">
                 Programmer&apos;s
               </h1>
-              <h1 className="hidden text-white sm:block sm:text-xl md:text-2xl">
+              <h1 className="hidden font-bold text-white sm:block sm:text-xl md:text-2xl">
                 University
               </h1>
             </div>
@@ -144,6 +144,17 @@ const Main = (props: IMainProps) => {
                       }`}
                     >
                       Home
+                    </span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/join/" className="border-none">
+                    <span
+                      className={`font-medium text-gray-200 hover:text-red-600 ${
+                        router.pathname === '/join' ? 'text-red-600' : ''
+                      }`}
+                    >
+                      Join
                     </span>
                   </Link>
                 </li>
@@ -177,7 +188,7 @@ const Main = (props: IMainProps) => {
             ref={menu}
             className="hidden w-full flex-col text-end transition-all md:flex"
           >
-            <ul className="mt-12 mr-3 flex flex-col gap-5 text-lg font-medium md:mt-0 md:flex-row md:justify-end md:gap-10 md:text-xl lg:gap-20">
+            <ul className="mt-12 mr-3 flex flex-col gap-5 text-lg font-medium md:mt-0 md:flex-row md:justify-end md:gap-6 md:text-xl lg:gap-10">
               <hr className="-ml-96 border border-gray-300 md:hidden" />
               <li>
                 <Link href="/" className="border-none">
@@ -187,6 +198,18 @@ const Main = (props: IMainProps) => {
                     }`}
                   >
                     Home
+                  </span>
+                </Link>
+              </li>
+              <hr className="-ml-96 border border-gray-300 md:hidden" />
+              <li>
+                <Link href="/join/" className="border-none">
+                  <span
+                    className={`link-underline link-underline-black text-gray-700 hover:text-red-800 ${
+                      router.pathname === '/join' ? 'link-active' : ''
+                    }`}
+                  >
+                    Join
                   </span>
                 </Link>
               </li>
