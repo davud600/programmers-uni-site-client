@@ -270,6 +270,56 @@ const Main = (props: IMainProps) => {
                 <h1 className="text-lg">University</h1>
               </div>
             </div>
+            <div className="footer-payment-methods">
+              <img
+                src="https://bank.paysera.com/assets/image/payment_types/xk_procreditbank.png"
+                alt="ProCredit Bank"
+              />
+              <img
+                src="https://bank.paysera.com/assets/image/payment_types/xk_raiffeisenbank.png"
+                alt="Raiffeisen Bank"
+              />
+              <img
+                src="https://bank.paysera.com/assets/image/payment_types/xk_nlbbank.png"
+                alt="NLB Bank"
+              />
+              <img
+                src="https://bank.paysera.com/assets/image/payment_types/xk_tebbank.png"
+                alt="TEB Bank"
+              />
+              <img
+                src="https://bank.paysera.com/assets/image/payment_types/xk_bktbank.png"
+                alt="BKT Bank"
+              />
+              <img
+                src="https://bank.paysera.com/assets/image/payment_types/xk_isbank.png"
+                alt="IS Bank"
+              />
+              <img
+                src="https://bank.paysera.com/assets/image/payment_types/xk_bankaekonomike.png"
+                alt="Banka Ekonomike"
+              />
+              <img
+                src="https://bank.paysera.com/assets/image/payment_types/xk_ziraatbank.png"
+                alt="Ziraat Bank"
+              />
+              <img
+                src="https://bank.paysera.com/assets/image/payment_types/xk_komercialnabank.png"
+                alt="Komercijalna Banka"
+              />
+              <img
+                src="https://bank.paysera.com/assets/image/payment_types/xk_bpb.png"
+                alt="BPB Bank"
+              />
+              <img
+                src="https://bank.paysera.com/assets/image/payment_types/wallet.png"
+                alt="Paysera account"
+              />
+              <img
+                src="https://bank.paysera.com/assets/image/payment_types/card.png"
+                alt="Payment cards"
+              />
+            </div>
             <div className="grid grid-cols-2 gap-8">
               <div>
                 <h2 className="mb-6 text-sm font-semibold uppercase text-gray-200">

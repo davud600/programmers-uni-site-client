@@ -24,6 +24,20 @@ section {
   min-height: 100vh;
 }
 
+.footer-payment-methods {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: .5rem;
+  margin: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .footer-payment-methods {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+}
+
 .stroke-text {
   color: #7c1919;
   -webkit-text-fill-color: #7c1919; /* Will override color (regardless of order) */
