@@ -25,10 +25,10 @@ section {
 }
 
 .stroke-text {
-  color: black;
+  color: #7c1919;
   -webkit-text-fill-color: #7c1919; /* Will override color (regardless of order) */
   -webkit-text-stroke-width: .5px;
-  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-color: white;
 }
 
 .footer-sm-link {
