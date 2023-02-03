@@ -22,10 +22,14 @@ const Main = (props: IMainProps) => {
 
   const handleMenuButtonClick = () => {
     setNavbarOpen((prev) => !prev);
+    wrapper.current.classList.toggle('!overflow-hidden');
   };
 
   return (
-    <div ref={wrapper} className="wrapper w-full text-gray-700 antialiased">
+    <div
+      ref={wrapper}
+      className="wrapper w-full overflow-y-hidden text-gray-700 antialiased"
+    >
       {props.meta}
 
       <div>
@@ -109,11 +113,11 @@ const Main = (props: IMainProps) => {
               alt="Not Found"
               quality={100}
             />
-            <div className="ml-3 flex flex-col font-bold sm:mt-1 md:mt-4">
-              <h1 className="hidden text-white sm:block sm:text-xl md:text-2xl">
+            <div className="ml-3 flex flex-col sm:mt-1 md:mt-6">
+              <h1 className="stroke-text -mb-2 hidden font-black text-white sm:block sm:text-xl md:text-2xl">
                 Programmer&apos;s
               </h1>
-              <h1 className="hidden text-white sm:block sm:text-xl md:text-2xl">
+              <h1 className="hidden font-black text-white sm:block sm:text-xl md:text-2xl">
                 University
               </h1>
             </div>
@@ -140,6 +144,17 @@ const Main = (props: IMainProps) => {
                       }`}
                     >
                       Home
+                    </span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/join/" className="border-none">
+                    <span
+                      className={`font-medium text-gray-200 hover:text-red-600 ${
+                        router.pathname === '/join' ? 'text-red-600' : ''
+                      }`}
+                    >
+                      Join
                     </span>
                   </Link>
                 </li>
@@ -173,7 +188,7 @@ const Main = (props: IMainProps) => {
             ref={menu}
             className="hidden w-full flex-col text-end transition-all md:flex"
           >
-            <ul className="mt-12 mr-3 flex flex-col gap-5 text-lg font-medium md:mt-0 md:flex-row md:justify-end md:gap-10 md:text-xl lg:gap-20">
+            <ul className="mt-12 mr-3 flex flex-col gap-5 text-lg font-medium md:mt-0 md:flex-row md:justify-end md:gap-6 md:text-xl lg:gap-10">
               <hr className="-ml-96 border border-gray-300 md:hidden" />
               <li>
                 <Link href="/" className="border-none">
@@ -183,6 +198,18 @@ const Main = (props: IMainProps) => {
                     }`}
                   >
                     Home
+                  </span>
+                </Link>
+              </li>
+              <hr className="-ml-96 border border-gray-300 md:hidden" />
+              <li>
+                <Link href="/join/" className="border-none">
+                  <span
+                    className={`link-underline link-underline-black text-gray-700 hover:text-red-800 ${
+                      router.pathname === '/join' ? 'link-active' : ''
+                    }`}
+                  >
+                    Join
                   </span>
                 </Link>
               </li>
@@ -229,7 +256,7 @@ const Main = (props: IMainProps) => {
 
         <footer className="mt-48 bg-red-900 py-6 px-8 sm:px-20 md:px-24">
           <div className="md:flex md:justify-between">
-            <div className="mb-6 flex items-center md:mb-0">
+            <div className="mb-6 flex items-start md:mb-0">
               <Image
                 src="/assets/images/logo.svg"
                 className="logo-footer mr-3 w-14 md:w-16"
@@ -242,6 +269,56 @@ const Main = (props: IMainProps) => {
                 <h1 className="text-lg">Programmer&apos;s</h1>
                 <h1 className="text-lg">University</h1>
               </div>
+            </div>
+            <div className="footer-payment-methods">
+              <img
+                src="https://bank.paysera.com/assets/image/payment_types/xk_procreditbank.png"
+                alt="ProCredit Bank"
+              />
+              <img
+                src="https://bank.paysera.com/assets/image/payment_types/xk_raiffeisenbank.png"
+                alt="Raiffeisen Bank"
+              />
+              <img
+                src="https://bank.paysera.com/assets/image/payment_types/xk_nlbbank.png"
+                alt="NLB Bank"
+              />
+              <img
+                src="https://bank.paysera.com/assets/image/payment_types/xk_tebbank.png"
+                alt="TEB Bank"
+              />
+              <img
+                src="https://bank.paysera.com/assets/image/payment_types/xk_bktbank.png"
+                alt="BKT Bank"
+              />
+              <img
+                src="https://bank.paysera.com/assets/image/payment_types/xk_isbank.png"
+                alt="IS Bank"
+              />
+              <img
+                src="https://bank.paysera.com/assets/image/payment_types/xk_bankaekonomike.png"
+                alt="Banka Ekonomike"
+              />
+              <img
+                src="https://bank.paysera.com/assets/image/payment_types/xk_ziraatbank.png"
+                alt="Ziraat Bank"
+              />
+              <img
+                src="https://bank.paysera.com/assets/image/payment_types/xk_komercialnabank.png"
+                alt="Komercijalna Banka"
+              />
+              <img
+                src="https://bank.paysera.com/assets/image/payment_types/xk_bpb.png"
+                alt="BPB Bank"
+              />
+              <img
+                src="https://bank.paysera.com/assets/image/payment_types/wallet.png"
+                alt="Paysera account"
+              />
+              <img
+                src="https://bank.paysera.com/assets/image/payment_types/card.png"
+                alt="Payment cards"
+              />
             </div>
             <div className="grid grid-cols-2 gap-8">
               <div>
@@ -281,12 +358,11 @@ const Main = (props: IMainProps) => {
             </div>
           </div>
           <hr className="mt-6 border-gray-200 opacity-20 sm:mx-auto" />
-          <div className="mt-8 pb-5 sm:flex sm:items-center sm:justify-between">
-            <div className="px-24"></div>
-            <span className="mx-8 text-sm text-gray-200 opacity-60 sm:text-center md:mx-0">
+          <div className="mt-8 flex justify-start pb-5 md:justify-center">
+            <span className="mx-8 mt-4 text-sm text-gray-200 opacity-60 md:mx-0 md:mt-0">
               © Copyright {new Date().getFullYear()} {AppConfig.title}.{' '}
             </span>
-            <div className="mt-4 flex md:m-0">
+            <div className="mt-4 flex md:m-0 md:ml-4">
               <a href="#" className="footer-sm-link">
                 <FontAwesomeIcon
                   icon={faInstagram}
