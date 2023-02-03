@@ -56,6 +56,14 @@ const Contact = () => {
             </form>
           </div>
         </div>
+        <div className="mt-24 flex flex-col gap-5 md:hidden">
+          <span className="opacity-60">Keep in touch</span>
+          <div className="flex flex-col gap-1">
+            <span className="opacity-60">Pristina</span>
+            <span className="opacity-60">Kosovo</span>
+          </div>
+          <span className="opacity-60">prouniks@gmail.com</span>
+        </div>
       </section>
     </Main>
   );
