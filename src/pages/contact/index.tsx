@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
 
@@ -7,21 +5,12 @@ const Contact = () => {
   return (
     <Main meta={<Meta title="Contact us" description="Contact us via email" />}>
       <section id="contact-section">
-        <Image
-          className="center contact-hexagon absolute z-10 drop-shadow-2xl"
-          src="/assets/images/hexagon-white.svg"
-          height={2000}
-          width={2000}
-          alt="Not Found"
-          quality={100}
-        />
-        <div className="center absolute z-20 ">
-          <article className="px-96 py-4 text-center">
-            <h1 className="text-3xl text-black">Contact us</h1>
-            <p className="text-xl text-black opacity-75">
-              You can contact us through our email. Also if you want to get a
-              full refund (available within 7 days of your purchase) and we will
-              respond fast as we can. :)
+        <div className="contact-container center absolute z-10 flex flex-col justify-center py-8 px-20 drop-shadow-2xl">
+          <article className="px-4 pt-80 text-center sm:pt-24 md:p-4">
+            <h1 className="text-lg text-black md:text-3xl">Contact us</h1>
+            <p className="text-base text-black opacity-75 md:text-xl">
+              You can contact us via email and we will respond fast as we can.
+              :)
             </p>
           </article>
           <form className="flex w-full justify-center gap-14 py-4 text-black">
@@ -33,7 +22,7 @@ const Contact = () => {
               </div>
               <span className="opacity-60">prouniks@gmail.com</span>
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col gap-1">
               <div className="flex w-full justify-between">
                 <input
                   type="text"
@@ -56,6 +45,12 @@ const Contact = () => {
                 cols={30}
                 rows={10}
               ></textarea>
+              <div>
+                <input
+                  type="submit"
+                  className="rounded-3xl border-2 border-red-800 px-8 py-3 transition-all hover:cursor-pointer hover:bg-red-800 hover:text-white"
+                />
+              </div>
             </div>
           </form>
         </div>

@@ -53,10 +53,26 @@ textarea:focus {
   margin: 2.5rem;
 }
 
+.contact-container {
+  background-image: url("/assets/images/hexagon-white.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 105vw;
+  height: 105vw;
+}
+
 @media (min-width: 768px) {
   .footer-payment-methods {
     display: grid;
     grid-template-columns: auto auto auto;
+  }
+
+  .contact-container {
+    min-width: 60rem;
+    min-height: 60rem;
+    width: 66vw;
+    height: 66vw;
   }
 }
 
@@ -143,15 +159,8 @@ textarea:focus {
   width: 600px;
 }
 
-.contact-hexagon {
-  width: 600px;
-}
-
 @media (min-width: 900px) {
   .main-hexagons {
-    width: 66vw;
-  }
-  .contact-hexagon {
     width: 66vw;
   }
 }
