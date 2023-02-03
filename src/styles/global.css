@@ -12,16 +12,38 @@ a:hover {
 
 @tailwind utilities;
 
+@font-face {
+  font-family: 'geomanistregular';
+  src: url('/assets/fonts/geomanist-regular-webfont.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'geomanistregular';
+  font-weight: 100 !important;
 }
 
 section {
   display: grid;
   place-items: center;
-  align-content: center;
   min-height: 100vh;
+}
+
+input:focus {
+  border: 2px solid rgb(153 27 27);
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+textarea:focus {
+  border: 2px solid rgb(153 27 27);
+  outline: none;
 }
 
 .footer-payment-methods {
@@ -121,8 +143,15 @@ section {
   width: 600px;
 }
 
+.contact-hexagon {
+  width: 600px;
+}
+
 @media (min-width: 900px) {
   .main-hexagons {
+    width: 66vw;
+  }
+  .contact-hexagon {
     width: 66vw;
   }
 }

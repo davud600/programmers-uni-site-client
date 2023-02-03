@@ -114,10 +114,10 @@ const Main = (props: IMainProps) => {
               quality={100}
             />
             <div className="ml-3 flex flex-col sm:mt-1 md:mt-6">
-              <h1 className="stroke-text -mb-2 hidden font-extrabold text-white sm:block sm:text-xl md:text-2xl">
+              <h1 className="stroke-text -mb-2 hidden font-black text-white sm:block sm:text-xl md:text-2xl">
                 Programmer&apos;s
               </h1>
-              <h1 className="hidden font-bold text-white sm:block sm:text-xl md:text-2xl">
+              <h1 className="hidden font-black text-white sm:block sm:text-xl md:text-2xl">
                 University
               </h1>
             </div>
@@ -256,7 +256,7 @@ const Main = (props: IMainProps) => {
 
         <footer className="mt-48 bg-red-900 py-6 px-8 sm:px-20 md:px-24">
           <div className="md:flex md:justify-between">
-            <div className="mb-6 flex items-center md:mb-0">
+            <div className="mb-6 flex items-start md:mb-0">
               <Image
                 src="/assets/images/logo.svg"
                 className="logo-footer mr-3 w-14 md:w-16"
@@ -358,12 +358,11 @@ const Main = (props: IMainProps) => {
             </div>
           </div>
           <hr className="mt-6 border-gray-200 opacity-20 sm:mx-auto" />
-          <div className="mt-8 pb-5 sm:flex sm:items-center sm:justify-between">
-            <div className="px-24"></div>
-            <span className="mx-8 text-sm text-gray-200 opacity-60 sm:text-center md:mx-0">
+          <div className="mt-8 flex justify-start pb-5 md:justify-center">
+            <span className="mx-8 mt-4 text-sm text-gray-200 opacity-60 md:mx-0 md:mt-0">
               © Copyright {new Date().getFullYear()} {AppConfig.title}.{' '}
             </span>
-            <div className="mt-4 flex md:m-0">
+            <div className="mt-4 flex md:m-0 md:ml-4">
               <a href="#" className="footer-sm-link">
                 <FontAwesomeIcon
                   icon={faInstagram}
