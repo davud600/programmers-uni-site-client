@@ -51,7 +51,7 @@ const Contact = () => {
 
       setMailStatus({
         sent: true,
-        failed: true,
+        failed: false,
         message:
           "Message sent successfully, we'll reach back at you as soon as we can.",
       });
@@ -86,7 +86,10 @@ const Contact = () => {
           <div className="contact-container z-10 flex flex-col justify-center py-8 px-20 drop-shadow-2xl">
             {sentMailStatus.sent && (
               <div className="absolute left-1/2 top-0 z-10 -translate-x-1/2 md:top-12">
-                <Alert type="danger" message={sentMailStatus.message} />
+                <Alert
+                  type={sentMailStatus.failed ? 'danger' : 'success'}
+                  message={sentMailStatus.message}
+                />
               </div>
             )}
             <article className="px-6 pt-24 text-center sm:pt-24 md:p-4">
