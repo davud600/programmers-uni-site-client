@@ -56,8 +56,6 @@ const Contact = () => {
           "Message sent successfully, we'll reach back at you as soon as we can.",
       });
     } catch (error) {
-      console.error(error);
-
       setMailStatus({
         sent: true,
         failed: true,
@@ -134,7 +132,7 @@ const Contact = () => {
                   id="textContent"
                   onChange={(e) => textAreaChangeHandler(setMessageContent, e)}
                   cols={30}
-                  rows={10}
+                  rows={5}
                 ></textarea>
                 <div className="flex justify-center md:justify-end">
                   <input
