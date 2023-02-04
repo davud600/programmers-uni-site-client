@@ -137,11 +137,13 @@ const Contact = () => {
                   cols={30}
                   rows={5}
                 ></textarea>
-                <div className="flex justify-center md:justify-end">
-                  <input
+                <div className="flex justify-center md:justify-start">
+                  <button
                     type="submit"
-                    className="rounded-3xl border-2 border-red-800 px-8 py-3 text-red-800 transition-all hover:cursor-pointer hover:bg-red-800 hover:text-white"
-                  />
+                    className="submit-btn rounded-3xl border-2 border-red-800 px-8 py-3 text-red-800 transition-all hover:cursor-pointer hover:bg-red-800 hover:text-white"
+                  >
+                    <span>Submit</span>
+                  </button>
                 </div>
               </div>
             </form>
