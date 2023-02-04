@@ -83,7 +83,7 @@ const Contact = () => {
     <Main meta={<Meta title="Contact us" description="Contact us via email" />}>
       <section id="contact-section">
         <div className="contact-container-container">
-          <div className="contact-container z-10 flex flex-col justify-center py-8 px-20 drop-shadow-2xl">
+          <div className="contact-container flex flex-col justify-center py-8 px-20 drop-shadow-2xl">
             {sentMailStatus.sent && (
               <div className="absolute left-1/2 top-0 z-10 -translate-x-1/2 md:top-12">
                 <Alert
