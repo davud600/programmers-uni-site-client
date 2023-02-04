@@ -68,10 +68,10 @@ const Index = () => {
             <button
               type="button"
               id="btn"
-              className="submit-btn mt-3 rounded-3xl border-2 border-red-800 px-8 py-3 text-red-800 hover:bg-red-800 hover:text-white"
+              className="submit-btn mt-3 rounded-3xl border-2 border-red-800 px-6 py-2 text-red-800 hover:bg-red-800 hover:text-white md:px-8 md:py-3"
               onClick={handleSubmit}
             >
-              <span>Submit</span>
+              <span className="text-base md:text-xl">Submit</span>
             </button>
           </div>
         </div>
