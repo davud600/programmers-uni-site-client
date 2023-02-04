@@ -76,9 +76,9 @@ const Index = () => {
           </div>
         </div>
 
-        <div className="image-container">
-          {/* <img src="/assets/images/problems.png" alt="not responding atm"></img> */}
-        </div>
+        {/* <div className="image-container">
+          <img src="/assets/images/problems.png" alt="not responding atm"></img>
+        </div> */}
       </section>
     </Main>
   );
