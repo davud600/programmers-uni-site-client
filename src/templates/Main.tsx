@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import type { ReactNode } from 'react';
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 
 import Hexagon from '@/components/Hexagon';
 import { AppConfig } from '@/utils/AppConfig';
@@ -17,11 +17,9 @@ type IMainProps = {
 const Main = (props: IMainProps) => {
   const menu = useRef<any>();
   const wrapper = useRef<any>();
-  const [navbarOpen, setNavbarOpen] = useState(false);
   const router = useRouter();
 
   const handleMenuButtonClick = () => {
-    setNavbarOpen((prev) => !prev);
     wrapper.current.classList.toggle('!overflow-hidden');
   };
 
@@ -248,11 +246,7 @@ const Main = (props: IMainProps) => {
           </div>
         </nav>
 
-        {!navbarOpen && (
-          <div className="content py-5 text-xl">{props.children}</div>
-        )}
-
-        {navbarOpen && <div className="py-44 sm:py-40"></div>}
+        <div className="content py-5 text-xl">{props.children}</div>
 
         <footer className="mt-48 bg-red-900 py-6 px-8 sm:px-20 md:px-24">
           <div className="md:flex md:justify-between">
