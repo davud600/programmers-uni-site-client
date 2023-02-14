@@ -1,0 +1,28 @@
+.contact-container-container {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  z-index:1;
+}
+
+.contact-container {
+  background-image: url("/assets/images/hexagon-white.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 575px;
+  min-height: 575px;
+  width: 105vw;
+  height: 105vw;
+  transition:all 0.5s ease;
+}
+
+@media (min-width: 768px) {
+  .contact-container {
+    min-width: 60rem;
+    min-height: 60rem;
+    width: 66vw;
+    height: 66vw;
+    z-index:1;
+  }
+}
