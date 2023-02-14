@@ -30,31 +30,31 @@ const Index = () => {
           Our Course Programs.
         </h1>
         <div className="top-courses-container flex flex-col md:flex-row">
-          <article className="course-card first-course-card flex flex-col justify-center py-8 px-24 drop-shadow-2xl">
-            {/* <h2 className="text-lg text-black md:text-xl">Course Title</h2>
-            <p className="text-base text-black opacity-75 md:text-lg">
+          <article className="course-card first-course-card flex flex-col justify-center overflow-hidden py-4 px-8 text-center drop-shadow-2xl md:px-20">
+            <h2 className="text-base text-black md:text-lg">Course Title</h2>
+            <p className="text-sm opacity-75 md:text-lg">
               this is the details about the course and shit idk like more info
               and stuff...
             </p>
-            <button>More details</button> */}
+            <button className="text-base md:text-lg">More details</button>
           </article>
-          <article className="course-card second-course-card flex flex-col justify-center py-8 px-24 drop-shadow-2xl">
-            {/* <h2 className="text-lg text-black md:text-xl">Course Title</h2>
-            <p className="text-base text-black opacity-75 md:text-lg">
+          <article className="course-card second-course-card flex flex-col justify-center py-4 px-8 text-center drop-shadow-2xl md:px-20">
+            <h2 className="text-base text-black md:text-lg">Course Title</h2>
+            <p className="text-sm opacity-75 md:text-lg">
               this is the details about the course and shit idk like more info
               and stuff...
             </p>
-            <button>More details</button> */}
+            <button className="text-base md:text-lg">More details</button>
           </article>
         </div>
         <div className="z-10">
-          <article className="course-card third-course-card flex flex-col justify-center py-8 px-24 drop-shadow-2xl">
-            {/* <h2 className="text-lg text-black md:text-xl">Course Title</h2>
-            <p className="text-base text-black opacity-75 md:text-lg">
+          <article className="course-card third-course-card flex flex-col justify-center py-4 px-8 text-center drop-shadow-2xl md:px-20">
+            <h2 className="text-base text-black md:text-lg">Course Title</h2>
+            <p className="text-sm opacity-75 md:text-lg">
               this is the details about the course and shit idk like more info
               and stuff...
             </p>
-            <button>More details</button> */}
+            <button className="text-base md:text-lg">More details</button>
           </article>
         </div>
       </section>

@@ -3,22 +3,22 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  min-width: 270px;
-  min-height: 270px;
-  transition:all 0.5s ease;
+  width: 250px;
+  height: 250px;
+  transition: all 0.5s ease;
 }
 
 .first-course-card {
-  margin-left: -30vw;
+  margin-left: -7.75rem;
   margin-right: 0;
-  margin-bottom: -10vw;
+  margin-bottom: -3rem;
 }
 .second-course-card {
-  margin-right: -30vw;
+  margin-right: -7.75rem;
 }
 .third-course-card {
-  margin-left: -30vw;
-  margin-top: -10vw;
+  margin-left: -7.75rem;
+  margin-top: -3rem;
 }
 
 .top-courses-container {
@@ -27,18 +27,18 @@
 
 @media(min-width: 768px) {
   .course-card {
-    min-width: 20rem;
-    min-height: 20rem;
-    z-index:1;
+    width: 24rem;
+    height: 24rem;
+    z-index: 2;
   }
 
   .first-course-card {
     margin-left: 0;
-    margin-right: -0.8vw;
-    margin-bottom: -1vw;
+    margin-right: -0.5rem;
+    margin-bottom: 0;
   }
   .second-course-card {
-    margin-left: -0.8vw;
+    margin-left: -0.5rem;
     margin-top: 0;
     margin-right: 0;
   }
@@ -48,7 +48,7 @@
   }
   
   .top-courses-container {
-    margin-bottom: -5.25vw;
+    margin-bottom: -4rem;
   }
 
 }
