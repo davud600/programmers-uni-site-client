@@ -2,6 +2,7 @@
 
 import React, { useRef } from 'react';
 
+import CourseCardsContainer from '@/components/courses/CourseCardsContainer';
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
 
@@ -25,39 +26,14 @@ const Index = () => {
       <section id="home-section">
         <h1 className="text-black">coming soon...</h1>
       </section>
+
       <section id="courses-section">
         <h1 className="pb-16 text-2xl text-black md:text-4xl">
           Our Course Programs.
         </h1>
-        <div className="top-courses-container flex flex-col md:flex-row">
-          <article className="course-card first-course-card flex flex-col justify-center overflow-hidden py-4 px-8 text-center drop-shadow-2xl md:px-20">
-            <h2 className="text-base text-black md:text-lg">Course Title</h2>
-            <p className="text-sm opacity-75 md:text-lg">
-              this is the details about the course and shit idk like more info
-              and stuff...
-            </p>
-            <button className="text-base md:text-lg">More details</button>
-          </article>
-          <article className="course-card second-course-card flex flex-col justify-center py-4 px-8 text-center drop-shadow-2xl md:px-20">
-            <h2 className="text-base text-black md:text-lg">Course Title</h2>
-            <p className="text-sm opacity-75 md:text-lg">
-              this is the details about the course and shit idk like more info
-              and stuff...
-            </p>
-            <button className="text-base md:text-lg">More details</button>
-          </article>
-        </div>
-        <div className="z-10">
-          <article className="course-card third-course-card flex flex-col justify-center py-4 px-8 text-center drop-shadow-2xl md:px-20">
-            <h2 className="text-base text-black md:text-lg">Course Title</h2>
-            <p className="text-sm opacity-75 md:text-lg">
-              this is the details about the course and shit idk like more info
-              and stuff...
-            </p>
-            <button className="text-base md:text-lg">More details</button>
-          </article>
-        </div>
+        <CourseCardsContainer />
       </section>
+
       <section id="practice-section" className="flex w-fit">
         <div className="flex flex-col p-6 md:p-16">
           <span className="flex pb-8 text-6xl font-black md:pb-12 md:text-8xl">
