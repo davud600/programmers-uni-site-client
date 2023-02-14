@@ -2,6 +2,7 @@
 
 import React, { useRef } from 'react';
 
+import CourseCardsContainer from '@/components/courses/CourseCardsContainer';
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
 
@@ -25,6 +26,14 @@ const Index = () => {
       <section id="home-section">
         <h1 className="text-black">coming soon...</h1>
       </section>
+
+      <section id="courses-section">
+        <h1 className="pb-16 text-2xl text-black md:text-4xl">
+          Our Course Programs.
+        </h1>
+        <CourseCardsContainer />
+      </section>
+
       <section id="practice-section" className="flex w-fit">
         <div className="flex flex-col p-6 md:p-16">
           <span className="flex pb-8 text-6xl font-black md:pb-12 md:text-8xl">

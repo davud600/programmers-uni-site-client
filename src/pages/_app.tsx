@@ -1,5 +1,6 @@
 import '../styles/global.css';
 import '../styles/practice.css';
+import '../styles/courses.css';
 
 import type { AppProps } from 'next/app';
 

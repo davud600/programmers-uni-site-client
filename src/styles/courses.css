@@ -1,0 +1,54 @@
+.course-card {
+  background-image: url("/assets/images/hexagon-white.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 250px;
+  height: 250px;
+  transition: all 0.5s ease;
+}
+
+.first-course-card {
+  margin-left: -7.75rem;
+  margin-right: 0;
+  margin-bottom: -3rem;
+}
+.second-course-card {
+  margin-right: -7.75rem;
+}
+.third-course-card {
+  margin-left: -7.75rem;
+  margin-top: -3rem;
+}
+
+.top-courses-container {
+  margin-bottom: 0;
+}
+
+@media(min-width: 768px) {
+  .course-card {
+    width: 24rem;
+    height: 24rem;
+    z-index: 2;
+  }
+
+  .first-course-card {
+    margin-left: 0;
+    margin-right: -0.5rem;
+    margin-bottom: 0;
+  }
+  .second-course-card {
+    margin-left: -0.5rem;
+    margin-top: 0;
+    margin-right: 0;
+  }
+  .third-course-card {
+    margin-left: 0;
+    margin-top: 0;
+  }
+  
+  .top-courses-container {
+    margin-bottom: -4rem;
+  }
+
+}
