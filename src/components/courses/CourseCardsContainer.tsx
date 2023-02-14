@@ -2,21 +2,19 @@ import CourseCard from '@/components/courses/CourseCard';
 import type { Course } from '@/components/courses/CourseIterface';
 
 const courseFirst: Course = {
-  title: 'Course 1',
-  details:
-    'this is a long text or paragraph explaining stuff about the first course',
+  title: 'Java',
+  details: 'Learn Object Oriented Programming in Java',
   type: 'first',
 };
 const courseSecond: Course = {
-  title: 'Course 2',
+  title: 'Web Development',
   details:
-    'this is a long text or paragraph explaining stuff about the second course',
+    'Essential Web Developer skills: git, HTML, CSS, javascript, PHP, Node.js, Ract.js, tailwind',
   type: 'second',
 };
 const courseThird: Course = {
-  title: 'Course 3',
-  details:
-    'this is a long text or paragraph explaining stuff about the third course',
+  title: 'C++',
+  details: 'C++ for beginners',
   type: 'third',
 };
 
