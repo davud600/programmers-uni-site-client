@@ -1,7 +1,7 @@
 import React from 'react';
 
 import CourseCardsContainer from '@/components/courses/CourseCardsContainer';
-import PracticeQuestion from '@/components/PracticeQuestion';
+import PracticeQuestion from '@/components/home/PracticeQuestion';
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
 
@@ -29,7 +29,7 @@ const Index = () => {
       </section>
 
       <section id="practice-section">
-        <h1 className="pt-24 pb-16 text-2xl text-black md:text-4xl">
+        <h1 className="pt-28 pb-8 text-2xl text-black md:text-4xl">
           Practice.
         </h1>
         <PracticeQuestion />

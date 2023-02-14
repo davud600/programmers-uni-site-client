@@ -9,7 +9,7 @@ const PracticeQuestion = () => {
   };
 
   return (
-    <div className="flex flex-col p-4">
+    <div className="flex flex-col px-4">
       <span className="text-xl font-medium md:text-3xl">
         What would the following lines of code give us : <br></br>int a, int b =
         30, int c;<br></br>System.out.println(b); <br></br>
