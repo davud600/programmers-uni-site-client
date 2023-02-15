@@ -56,9 +56,19 @@ const About = () => (
       <article className="px-3 py-1">
         <h1 className="text-lg text-black md:text-xl">• What will we learn?</h1>
         <p className="text-base md:text-lg">
-          There&apos;s a few options you could go with, Object Oriented in Java,
-          Full-Stack Web Development and Basics of C++.
+          There&apos;s a few options you could go with:
         </p>
+        <p className="text-base md:text-lg">
+          1. Object Oriented in Java - You will learn the core concepts of OOP
+          and learn Java.
+        </p>
+        <p className="text-base md:text-lg">
+          2. Full-Stack Web Development - You will learn to use tools like git,
+          github, visual studio coode, HTML, CSS, Javascript and also modern
+          technologies like React / Next js, tailwind and also backend
+          development with Node js and PHP.
+        </p>
+        <p className="text-base md:text-lg">3. Basics of C++.</p>
       </article>
       <article className="px-3 py-1">
         <h1 className="text-lg text-black md:text-xl">
