@@ -33,31 +33,50 @@ const About = () => (
           • What is Programmer&apos;s University?
         </h1>
         <p className="text-base md:text-lg">
-          answer hahahah this is a long answer to this question kekekekek.
+          Something between a bootcamp and a private tutoring, we have sessions
+          each week which are interactive and intuitive but we don&apos;t give
+          any certificates in the end.
         </p>
       </article>
       <article className="px-3 py-1">
-        <h1 className="text-lg text-black md:text-xl">• question?</h1>
+        <h1 className="text-lg text-black md:text-xl">
+          • Who teaches during the learning sessions?
+        </h1>
         <p className="text-base md:text-lg">
-          answer hahahah this is a long answer to this question kekekekek.
+          They are students with a big passion for programming.
         </p>
       </article>
       <article className="px-3 py-1">
-        <h1 className="text-lg text-black md:text-xl">• question?</h1>
+        <h1 className="text-lg text-black md:text-xl">• Who can join?</h1>
         <p className="text-base md:text-lg">
-          answer hahahah this is a long answer to this question kekekekek.
+          Anyone who wants to learn programming who is within the ages of 15-25
+          but out main target is students.
         </p>
       </article>
       <article className="px-3 py-1">
-        <h1 className="text-lg text-black md:text-xl">• question?</h1>
+        <h1 className="text-lg text-black md:text-xl">• What will we learn?</h1>
         <p className="text-base md:text-lg">
-          answer hahahah this is a long answer to this question kekekekek.
+          There&apos;s a few options you could go with, Object Oriented in Java,
+          Full-Stack Web Development and Basics of C++.
         </p>
       </article>
       <article className="px-3 py-1">
-        <h1 className="text-lg text-black md:text-xl">• question?</h1>
+        <h1 className="text-lg text-black md:text-xl">
+          • What if I want private tutoring?
+        </h1>
         <p className="text-base md:text-lg">
-          answer hahahah this is a long answer to this question kekekekek.
+          We also offer private tutoring to students who want to be taught
+          privately, if you&apos;re interested contact us via email or the
+          contact form on our website.
+        </p>
+      </article>
+      <article className="px-3 py-1">
+        <h1 className="text-lg text-black md:text-xl">
+          • Do we get any certifications at the end of the course?
+        </h1>
+        <p className="text-base md:text-lg">
+          All we provide is knowledge and a community of students helping each
+          other, we don&apos;t offer any certificates or job opportunities.
         </p>
       </article>
     </section>
