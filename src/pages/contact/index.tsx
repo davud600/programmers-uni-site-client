@@ -82,17 +82,15 @@ const Contact = () => {
   return (
     <Main meta={<Meta title="Contact us" description="Contact us via email" />}>
       <section id="contact-section">
-        <div className="contact-container-container">
+        <div className="contact-container-container -rotate">
           <div className="contact-container flex flex-col justify-center py-8 px-20 drop-shadow-2xl">
             {sentMailStatus.sent && (
-              <div className="absolute left-1/2 top-0 z-10 -translate-x-1/2 md:top-12">
-                <Alert
-                  type={sentMailStatus.failed ? 'danger' : 'success'}
-                  message={sentMailStatus.message}
-                />
-              </div>
+              <Alert
+                type={sentMailStatus.failed ? 'danger' : 'success'}
+                message={sentMailStatus.message}
+              />
             )}
-            <article className="px-6 pt-24 text-center sm:pt-24 md:p-4">
+            <article className="fade-in-late px-6 pt-24 text-center sm:pt-24 md:p-4">
               <h1 className="text-lg text-black md:text-3xl">Contact us</h1>
               <p className="text-base text-black opacity-75 md:text-xl">
                 You can contact us via email and we will respond fast as we can.
@@ -100,7 +98,7 @@ const Contact = () => {
               </p>
             </article>
             <form
-              className="flex w-full justify-center gap-14 py-4 text-black"
+              className="fade-in-late flex w-full justify-center gap-14 py-4 text-black"
               onSubmit={onSubmitHandler}
             >
               <div className="mt-0 hidden flex-col gap-3 text-base md:mt-5 md:flex md:gap-6 md:text-lg">

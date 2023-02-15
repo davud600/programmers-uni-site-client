@@ -19,8 +19,41 @@ a:hover {
   font-style: normal;
 }
 
+.rotate {
+  animation: rotateAnimation ease-out 275ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.-rotate {
+  animation: rotateAnimationNegative ease-out 275ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+ 
+@keyframes rotateAnimation {
+  0% {
+    transform: scale(0.85) rotate(100deg);
+  }
+  100% {
+    transform: scale(1) rotate(0);
+  }
+}
+@keyframes rotateAnimationNegative {
+  0% {
+    transform: scale(0.85) rotate(-100deg);
+  }
+  100% {
+    transform: scale(1) rotate(0);
+  }
+}
+
 .fade-in {
   animation: fadeInAnimation ease 500ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.fade-in-late {
+  animation: fadeInAnimation ease 800ms;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
