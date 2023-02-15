@@ -19,6 +19,21 @@ a:hover {
   font-style: normal;
 }
 
+.fade-in {
+  animation: fadeInAnimation ease 500ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+ 
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -46,42 +61,36 @@ textarea:focus {
   outline: none;
 }
 
-.footer-payment-methods {
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: .5rem;
-  margin: 2.5rem;
+.submit-btn {
+  transition:all 0.4s ease;
+}
+.submit-btn:hover {
+  transition:all 0.1s ease-in-out;
+  padding-right: 2.5rem;
 }
 
-.contact-container-container {
+.submit-btn span {
+  cursor: pointer;
   display: flex;
-  justify-content: center;
-  width: 100vw;
+  position: relative;
+  transition: all 0.25s ease-in-out;
 }
 
-.contact-container {
-  background-image: url("/assets/images/hexagon-white.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  min-width: 575px;
-  min-height: 575px;
-  width: 105vw;
-  height: 105vw;
+.submit-btn span::after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  right: 20px;
+  transition: all 0.1s ease-in-out;
 }
 
-@media (min-width: 768px) {
-  .footer-payment-methods {
-    display: grid;
-    grid-template-columns: auto auto auto;
-  }
+.submit-btn:hover span {
+  padding-right: 25px;
+}
 
-  .contact-container {
-    min-width: 60rem;
-    min-height: 60rem;
-    width: 66vw;
-    height: 66vw;
-  }
+.submit-btn:hover span:after {
+  opacity: 1;
+  right: -1rem;
 }
 
 .stroke-text {
@@ -89,11 +98,6 @@ textarea:focus {
   -webkit-text-fill-color: #7c1919; /* Will override color (regardless of order) */
   -webkit-text-stroke-width: .5px;
   -webkit-text-stroke-color: white;
-}
-
-.footer-sm-link {
-  text-decoration: none !important;
-  all: unset !important;
 }
 
 .link-underline {
@@ -152,234 +156,9 @@ textarea:focus {
   -webkit-text-stroke-color: black;
 }
 
-.logo-footer {
-  filter: grayscale(1) contrast(2) brightness(0.8);
-}
-
 .wrapper {
   height: 100vh;
   overflow-y: auto;
   overflow-x: hidden;
   perspective: 10px;
-}
-
-.main-hexagons {
-  width: 600px;
-}
-
-@media (min-width: 900px) {
-  .main-hexagons {
-    width: 66vw;
-  }
-}
-
-.small-hexagons {
-  position: relative;
-  transform-style: preserve-3d;
-  z-index: 10;
-}
-
-.hexagon-one {
-  top: 10rem;
-  right: -8rem;
-  transform: scale(1.5) translateZ(-6px) rotate(12deg);
-}
-
-.hexagon-two {
-  top: 0rem;
-  right: 20rem;
-  transform: scale(1.5) translateZ(-12px) rotate(12deg);
-}
-
-.hexagon-three {
-  top: 30rem;
-  right: 25rem;
-  transform: scale(1.5) translateZ(-8px) rotate(12deg);
-}
-
-.hexagon-four {
-  top: 50rem;
-  right: 20rem;
-  transform: scale(1.5) translateZ(-12px) rotate(12deg);
-}
-
-.hexagon-five {
-  top: 20rem;
-  right: 0rem;
-  transform: scale(1.5) translateZ(-9px) rotate(12deg);
-}
-
-.hexagon-six {
-  top: 50rem;
-  right: 0rem;
-  transform: scale(1.5) translateZ(-4px) rotate(12deg);
-}
-
-.hexagon-seven {
-  bottom: -85rem;
-  right: 0rem;
-  transform: scale(1.5) translateZ(-4px) rotate(12deg);
-}
-
-.hexagon-eight {
-  bottom: -70rem;
-  left: 0rem;
-  transform: scale(1.5) translateZ(-4px) rotate(12deg);
-}
-
-@media (min-width: 640px) {
-  .hexagon-one {
-    top: 10rem;
-    right: -8rem;
-    transform: scale(1.6) translateZ(-6px) rotate(12deg);
-  }
-
-  .hexagon-two {
-    top: 0rem;
-    right: 44rem;
-    transform: scale(1.6) translateZ(-12px) rotate(12deg);
-  }
-
-  .hexagon-three {
-    top: 30rem;
-    right: 40rem;
-    transform: scale(1.6) translateZ(-8px) rotate(12deg);
-  }
-
-  .hexagon-four {
-    top: 50rem;
-    right: 90rem;
-    transform: scale(1.6) translateZ(-12px) rotate(12deg);
-  }
-
-  .hexagon-five {
-    top: 20rem;
-    right: 0rem;
-    transform: scale(1.6) translateZ(-9px) rotate(12deg);
-  }
-
-  .hexagon-six {
-    top: 50rem;
-    right: -10rem;
-    transform: scale(1.6) translateZ(-4px) rotate(12deg);
-  }
-
-  .hexagon-seven {
-    bottom: -85rem;
-    right: 0rem;
-    transform: scale(1.6) translateZ(-4px) rotate(12deg);
-  }
-
-  .hexagon-eight {
-    bottom: -70rem;
-    left: 0rem;
-    transform: scale(1.6) translateZ(-4px) rotate(12deg);
-  }
-}
-
-@media (min-width: 768px) {
-  .hexagon-one {
-    top: 10rem;
-    right: -10rem;
-    transform: scale(1.75) translateZ(-6px) rotate(12deg);
-  }
-  
-  .hexagon-two {
-    top: 0rem;
-    right: 50rem;
-    transform: scale(1.75) translateZ(-12px) rotate(12deg);
-  }
-  
-  .hexagon-three {
-    top: 23rem;
-    right: 110rem;
-    transform: scale(1.75) translateZ(-8px) rotate(12deg);
-  }
-  
-  .hexagon-four {
-    top: 50rem;
-    right: 90rem;
-    transform: scale(1.75) translateZ(-12px) rotate(12deg);
-  }
-  
-  .hexagon-five {
-    top: 20rem;
-    right: 0rem;
-    transform: scale(1.75) translateZ(-9px) rotate(12deg);
-  }
-  
-  .hexagon-six {
-    top: 50rem;
-    right: -15rem;
-    transform: scale(1.75) translateZ(-4px) rotate(12deg);
-  }
-  
-  .hexagon-seven {
-    bottom: -85rem;
-    right: 0rem;
-    transform: scale(1.75) translateZ(-4px) rotate(12deg);
-  }
-  
-  .hexagon-eight {
-    bottom: -70rem;
-    left: 0rem;
-    transform: scale(1.75) translateZ(-4px) rotate(12deg);
-  }
-}
-
-
-.burger-wrapper {
-  cursor: pointer;
-}
-#meny {
-  background: #333;
-  width: 50rem;
-  height: 100vh;
-  position: fixed;
-  right: 0;
-  transition-timing-function: cubic-bezier(10,2,3,1);
-  transform: translateX(50rem);
-  top: 0;
-  z-index: 0;
-  transition: 0.5s;
-}
-#menyAvPaa {
-  display: none;
-}
-
-#menyAvPaa:checked ~ #meny {
-  transform: translateX(0rem);
-}
-
-#burger {
-  position: absolute;
-  cursor: pointer;
-  width: 2rem;
-  height: 1.7rem;
-  right: 1rem;
-  top: 1rem;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-}
-
-#burger > div {
-  height: 3px;
-  background-color: #000;
-  transition: 0.5s;
-  z-index: 999;
-}
-
-#menyAvPaa:checked ~ #burger > div {
-  background-color: #fff;
-}
-
-#menyAvPaa:checked ~ #burger > div:nth-child(1) {
-  transform: translateY(10px) rotate(45deg);
-}
-#menyAvPaa:checked ~ #burger > div:nth-child(2) {
-  opacity: 0;
-}
-#menyAvPaa:checked ~ #burger > div:nth-child(3) {
-  transform: translateY(-15px) rotate(-45deg);
 }

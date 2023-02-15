@@ -1,0 +1,56 @@
+.burger-wrapper {
+  cursor: pointer;
+}
+#meny {
+  background: #333;
+  width: 50rem;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  transition-timing-function: cubic-bezier(10,2,3,1);
+  transform: translateX(50rem);
+  top: 0;
+  z-index: 2;
+  transition: all 0.6s ease;
+}
+#menyAvPaa {
+  display: none;
+}
+
+#menyAvPaa:checked ~ #meny {
+  transform: translateX(0rem);
+}
+
+#burger {
+  position: absolute;
+  cursor: pointer;
+  width: 2rem;
+  height: 1.7rem;
+  right: 1rem;
+  top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+#burger > div {
+  height: 3px;
+  background-color: #000;
+  transition: 0.5s;
+  z-index: 3; 
+}
+
+#menyAvPaa:checked ~ #burger > div {
+  background-color: #fff;
+  
+}
+
+#menyAvPaa:checked ~ #burger > div:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+#menyAvPaa:checked ~ #burger > div:nth-child(2) {
+  opacity: 0;
+}
+#menyAvPaa:checked ~ #burger > div:nth-child(3) {
+  transform: translateY(-15px) rotate(-45deg);
+}

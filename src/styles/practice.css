@@ -29,36 +29,3 @@ input[type="radio"] + label:before {
 input[type="radio"]:checked + label:before {
   background-color:rgb(153,27,27);
 }
-
-
-.submit-btn {
-  transition:all 0.4s ease;
-}
-.submit-btn:hover {
-  transition:all 0.1s ease-in-out;
-  padding-right: 2.5rem;
-}
-
-.submit-btn span {
-  cursor: pointer;
-  display: flex;
-  position: relative;
-  transition: all 0.25s ease-in-out;
-}
-
-.submit-btn span::after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  right: 20px;
-  transition: all 0.1s ease-in-out;
-}
-
-.submit-btn:hover span {
-  padding-right: 25px;
-}
-
-.submit-btn:hover span:after {
-  opacity: 1;
-  right: -1rem;
-}

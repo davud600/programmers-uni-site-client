@@ -6,19 +6,19 @@ import { Main } from '@/templates/Main';
 
 const SERVER_URL = 'http://localhost:4000/';
 
+interface SentMailStatus {
+  sent: boolean;
+  failed: boolean;
+  message: string;
+}
+
+interface FormDataType {
+  email: string;
+  fullName: string;
+  messageContent: string;
+}
+
 const Contact = () => {
-  interface SentMailStatus {
-    sent: boolean;
-    failed: boolean;
-    message: string;
-  }
-
-  interface FormDataType {
-    email: string;
-    fullName: string;
-    messageContent: string;
-  }
-
   const [sentMailStatus, setMailStatus] = useState<SentMailStatus>({
     sent: false,
     failed: false,
@@ -83,7 +83,7 @@ const Contact = () => {
     <Main meta={<Meta title="Contact us" description="Contact us via email" />}>
       <section id="contact-section">
         <div className="contact-container-container">
-          <div className="contact-container z-10 flex flex-col justify-center py-8 px-20 drop-shadow-2xl">
+          <div className="contact-container flex flex-col justify-center py-8 px-20 drop-shadow-2xl">
             {sentMailStatus.sent && (
               <div className="absolute left-1/2 top-0 z-10 -translate-x-1/2 md:top-12">
                 <Alert
@@ -137,11 +137,13 @@ const Contact = () => {
                   cols={30}
                   rows={5}
                 ></textarea>
-                <div className="flex justify-center md:justify-end">
-                  <input
+                <div className="flex justify-center md:justify-start">
+                  <button
                     type="submit"
-                    className="rounded-3xl border-2 border-red-800 px-8 py-3 text-red-800 transition-all hover:cursor-pointer hover:bg-red-800 hover:text-white"
-                  />
+                    className="submit-btn mt-3 rounded-3xl border-2 border-red-800 py-2 px-6  text-red-800 transition-all hover:cursor-pointer hover:bg-red-800 hover:text-white md:px-8 md:py-3"
+                  >
+                    <span className="text-base md:text-xl">Submit</span>
+                  </button>
                 </div>
               </div>
             </form>
