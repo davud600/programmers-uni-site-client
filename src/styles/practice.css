@@ -6,26 +6,26 @@
   padding-right:5rem;
 }
 .practice-form {
-  width:fit-content;
+  width: fit-content;
 }
 
 input[type="radio"] + label {
-  font-size:25px;
+  font-size: 22px;
 }
 input[type="radio"] {
-  display:none;
+  display: none;
 }
 input[type="radio"] + label:before {
-  content:"";
-  width:2rem;
-  height:2rem;
-  display:inline-block;
-  border: 4px solid black;
-  border-radius:35%;
-  margin-right:0.5rem;
-  vertical-align:middle;
-  transition:all 0.3s ease;
+  content: "";
+  width: 1.75rem;
+  height: 1.75rem;
+  display: inline-block;
+  border: 3px solid black;
+  border-radius: 35%;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  transition: all 250ms ease;
 }
 input[type="radio"]:checked + label:before {
-  background-color:rgb(153,27,27);
+  background-color: rgb(153,27,27);
 }

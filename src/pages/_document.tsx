@@ -10,6 +10,7 @@ class MyDocument extends Document {
       <Html lang={AppConfig.locale}>
         <Head />
         <body>
+          <div id="portal" className="absolute z-50" />
           <Main />
           <NextScript />
         </body>
