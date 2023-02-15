@@ -23,11 +23,11 @@ const practiceQuestion: PracticeQuestion = {
   code: '<span>int a, int b = 30, int c;</span><span>System.out.println(b);</span><span>System.out.println(c);</span>',
   answers: [
     {
-      content: 'answer 1',
+      content: 'Error',
       value: 0,
     },
     {
-      content: 'answer 2',
+      content: '30',
       value: 1,
     },
   ],
@@ -91,16 +91,14 @@ const Practice = () => {
   return (
     <>
       {answeredStatus.answered && (
-        <div className="absolute left-1/2 z-10 mb-48 -translate-x-1/2 md:mb-64">
-          <Alert
-            type={answeredStatus.correct ? 'success' : 'danger'}
-            message={`${
-              answeredStatus.correct
-                ? ANSWERED_CORRECT_MESSAGE
-                : ANSWERED_WRONG_MESSAGE
-            }`}
-          />
-        </div>
+        <Alert
+          type={answeredStatus.correct ? 'success' : 'danger'}
+          message={`${
+            answeredStatus.correct
+              ? ANSWERED_CORRECT_MESSAGE
+              : ANSWERED_WRONG_MESSAGE
+          }`}
+        />
       )}
       <div className="flex flex-col px-4">
         <span className="text-xl font-medium md:text-3xl">
