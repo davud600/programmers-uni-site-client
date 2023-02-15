@@ -23,6 +23,44 @@ const About = () => (
         </div>
       </div>
     </section>
+
+    <section id="faq-section">
+      <h1 className="pt-24 pb-16 text-2xl text-black md:text-4xl">
+        Frequently asked questions.
+      </h1>
+      <article className="px-3 py-1">
+        <h1 className="text-lg text-black md:text-xl">
+          • What is Programmer&apos;s University?
+        </h1>
+        <p className="text-base md:text-lg">
+          answer hahahah this is a long answer to this question kekekekek.
+        </p>
+      </article>
+      <article className="px-3 py-1">
+        <h1 className="text-lg text-black md:text-xl">• question?</h1>
+        <p className="text-base md:text-lg">
+          answer hahahah this is a long answer to this question kekekekek.
+        </p>
+      </article>
+      <article className="px-3 py-1">
+        <h1 className="text-lg text-black md:text-xl">• question?</h1>
+        <p className="text-base md:text-lg">
+          answer hahahah this is a long answer to this question kekekekek.
+        </p>
+      </article>
+      <article className="px-3 py-1">
+        <h1 className="text-lg text-black md:text-xl">• question?</h1>
+        <p className="text-base md:text-lg">
+          answer hahahah this is a long answer to this question kekekekek.
+        </p>
+      </article>
+      <article className="px-3 py-1">
+        <h1 className="text-lg text-black md:text-xl">• question?</h1>
+        <p className="text-base md:text-lg">
+          answer hahahah this is a long answer to this question kekekekek.
+        </p>
+      </article>
+    </section>
   </Main>
 );
 

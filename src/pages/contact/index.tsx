@@ -6,19 +6,19 @@ import { Main } from '@/templates/Main';
 
 const SERVER_URL = 'http://localhost:4000/';
 
+interface SentMailStatus {
+  sent: boolean;
+  failed: boolean;
+  message: string;
+}
+
+interface FormDataType {
+  email: string;
+  fullName: string;
+  messageContent: string;
+}
+
 const Contact = () => {
-  interface SentMailStatus {
-    sent: boolean;
-    failed: boolean;
-    message: string;
-  }
-
-  interface FormDataType {
-    email: string;
-    fullName: string;
-    messageContent: string;
-  }
-
   const [sentMailStatus, setMailStatus] = useState<SentMailStatus>({
     sent: false,
     failed: false,
