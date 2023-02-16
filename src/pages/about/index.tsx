@@ -15,7 +15,7 @@ const About = () => (
               students who are interested in learning programming with Java, C++
               or Web Development. Our team is also young students who have been
               passionate about programming for a long time and have gained some
-              experience from learning and working together, so we though it
+              experience from learning and working together, so we thought it
               would be a good idea to build a community of students doing the
               same thing.
             </p>
