@@ -35,7 +35,9 @@ const Index = () => {
         <AnimateIn>
           <SectionTitle title="Practice." />
         </AnimateIn>
-        <PracticeQuestion />
+        <AnimateIn>
+          <PracticeQuestion />
+        </AnimateIn>
       </section>
     </Main>
   );
