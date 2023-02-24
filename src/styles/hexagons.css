@@ -59,7 +59,25 @@
 .hexagon-eight {
   bottom: -70rem;
   left: 0rem;
+  transform: scale(1.5) translateZ(-7px) rotate(12deg);
+}
+
+.hexagon-nine {
+  bottom: -125rem;
+  left: 20rem;
   transform: scale(1.5) translateZ(-4px) rotate(12deg);
+}
+
+.hexagon-ten {
+  bottom: -150rem;
+  left: -6rem;
+  transform: scale(1.5) translateZ(-9px) rotate(12deg);
+}
+
+.hexagon-eleven {
+  bottom: -170rem;
+  left: 20rem;
+  transform: scale(1.5) translateZ(-12px) rotate(12deg);
 }
 
 @media (min-width: 640px) {
@@ -108,7 +126,26 @@
   .hexagon-eight {
     bottom: -70rem;
     left: 0rem;
+    transform: scale(1.6) translateZ(-7px) rotate(12deg);
+  }
+
+  .hexagon-nine {
+    bottom: -125rem;
+
+    left: 40rem;
     transform: scale(1.6) translateZ(-4px) rotate(12deg);
+  }
+
+  .hexagon-ten {
+    bottom: -150rem;
+    left: -10rem;
+    transform: scale(1.6) translateZ(-9px) rotate(12deg);
+  }
+
+  .hexagon-eleven {
+    bottom: -170rem;
+    left: 35rem;
+    transform: scale(1.6) translateZ(-12px) rotate(12deg);
   }
 }
 
@@ -158,6 +195,24 @@
   .hexagon-eight {
     bottom: -70rem;
     left: 0rem;
+    transform: scale(1.75) translateZ(-7px) rotate(12deg);
+  }
+
+  .hexagon-nine {
+    bottom: -125rem;
+    left: 70rem;
     transform: scale(1.75) translateZ(-4px) rotate(12deg);
+  }
+
+  .hexagon-ten {
+    bottom: -150rem;
+    left: 0rem;
+    transform: scale(1.75) translateZ(-9px) rotate(12deg);
+  }
+
+  .hexagon-eleven {
+    bottom: -170rem;
+    left: 50rem;
+    transform: scale(1.75) translateZ(-12px) rotate(12deg);
   }
 }

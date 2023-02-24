@@ -14,7 +14,7 @@
   min-height: 575px;
   width: 105vw;
   height: 105vw;
-  transition:all 0.5s ease;
+  transition: all 500ms ease;
 }
 
 @media (min-width: 768px) {

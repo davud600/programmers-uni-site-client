@@ -1,7 +1,10 @@
+/* eslint-disable tailwindcss/migration-from-tailwind-2 */
 import React from 'react';
 
+import AnimateIn from '@/components/animations/AnimateIn';
 import CourseCardsContainer from '@/components/courses/CourseCardsContainer';
 import PracticeQuestion from '@/components/home/PracticeQuestion';
+import SectionTitle from '@/components/SectionTitle';
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
 
@@ -16,23 +19,25 @@ const Index = () => {
       }
     >
       <section id="home-section">
-        <h1 className="pt-24 pb-16 text-2xl text-black md:text-4xl">
-          Coming soon...
-        </h1>
+        <AnimateIn>
+          <SectionTitle title="Coming soon..." />
+        </AnimateIn>
       </section>
 
-      <section id="courses-section">
-        <h1 className="pt-24 pb-16 text-2xl text-black md:text-4xl">
-          Our Course Programs.
-        </h1>
+      <section id="courses-section" className="bg-black bg-opacity-20">
+        <AnimateIn>
+          <SectionTitle title="Our course programs." style="text-white" />
+        </AnimateIn>
         <CourseCardsContainer />
       </section>
 
       <section id="practice-section">
-        <h1 className="pt-28 pb-8 text-2xl text-black md:text-4xl">
-          Practice.
-        </h1>
-        <PracticeQuestion />
+        <AnimateIn>
+          <SectionTitle title="Practice." />
+        </AnimateIn>
+        <AnimateIn>
+          <PracticeQuestion />
+        </AnimateIn>
       </section>
     </Main>
   );

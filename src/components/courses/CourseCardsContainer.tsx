@@ -1,3 +1,6 @@
+import AnimateLeft from '@/components/animations/AnimateLeft';
+import AnimateRight from '@/components/animations/AnimateRight';
+import AnimateUp from '@/components/animations/AnimateUp';
 import CourseCard from '@/components/courses/CourseCard';
 import type { Course } from '@/components/courses/CourseIterface';
 
@@ -21,12 +24,18 @@ const courseThird: Course = {
 const CourseCardsContainer = () => {
   return (
     <>
-      <div className="top-courses-container flex flex-col md:flex-row">
-        <CourseCard course={courseFirst} />
-        <CourseCard course={courseSecond} />
+      <div className="top-courses-container mt-16 flex flex-col md:flex-row">
+        <AnimateRight>
+          <CourseCard course={courseFirst} />
+        </AnimateRight>
+        <AnimateLeft>
+          <CourseCard course={courseSecond} />
+        </AnimateLeft>
       </div>
       <div className="z-10">
-        <CourseCard course={courseThird} />
+        <AnimateUp>
+          <CourseCard course={courseThird} />
+        </AnimateUp>
       </div>
     </>
   );

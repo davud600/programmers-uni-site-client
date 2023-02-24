@@ -22,12 +22,12 @@ const Header = ({ wrapper }: { wrapper: any }) => {
           alt="Not Found"
           quality={100}
         />
-        <div className="ml-3 flex flex-col sm:mt-1 md:mt-6">
-          <h1 className="stroke-text -mb-2 hidden font-black text-white sm:block sm:text-xl md:text-2xl">
-            Programmer&apos;s
+        <div className="ml-3 flex flex-col sm:mt-1 md:mt-3">
+          <h1 className="mt-2 -mb-5 hidden font-black tracking-tight text-white sm:block sm:text-xl md:text-3xl">
+            PROGRAMMER&apos;S
           </h1>
-          <h1 className="hidden font-black text-white sm:block sm:text-xl md:text-2xl">
-            University
+          <h1 className="stroke-text hidden font-black tracking-wide text-white sm:block sm:text-xl md:text-4xl">
+            UNIVERSITY
           </h1>
         </div>
       </div>
@@ -93,12 +93,12 @@ const Header = ({ wrapper }: { wrapper: any }) => {
         ref={menu}
         className="hidden w-full flex-col text-end transition-all md:flex"
       >
-        <ul className="mt-12 mr-3 flex flex-col gap-5 text-lg font-medium md:mt-0 md:flex-row md:justify-end md:gap-6 md:text-xl lg:gap-10">
+        <ul className="mt-12 mr-3 flex flex-col gap-4 text-lg md:mt-0 md:flex-row md:justify-end md:gap-5 md:text-lg lg:gap-7">
           <hr className="-ml-96 border border-gray-300 md:hidden" />
           <li>
             <Link href="/" className="border-none">
               <span
-                className={`link-underline link-underline-black text-gray-700 hover:text-red-800 ${
+                className={`link-underline link-underline-black text-gray-700 hover:text-red-900 ${
                   router.pathname === '/' ? 'link-active' : ''
                 }`}
               >
@@ -110,7 +110,7 @@ const Header = ({ wrapper }: { wrapper: any }) => {
           <li>
             <Link href="/join/" className="border-none">
               <span
-                className={`link-underline link-underline-black text-gray-700 hover:text-red-800 ${
+                className={`link-underline link-underline-black text-gray-700 hover:text-red-900 ${
                   router.pathname === '/join' ? 'link-active' : ''
                 }`}
               >
@@ -125,7 +125,7 @@ const Header = ({ wrapper }: { wrapper: any }) => {
               className="border-none text-gray-700 hover:text-gray-900"
             >
               <span
-                className={`link-underline link-underline-black text-gray-700 hover:text-red-800 ${
+                className={`link-underline link-underline-black text-gray-700 hover:text-red-900 ${
                   router.pathname === '/about' ? 'link-active' : ''
                 }`}
               >
@@ -140,7 +140,7 @@ const Header = ({ wrapper }: { wrapper: any }) => {
               className="border-none text-gray-700 hover:text-gray-900"
             >
               <span
-                className={`link-underline link-underline-black text-gray-700 hover:text-red-800 ${
+                className={`link-underline link-underline-black text-gray-700 hover:text-red-900 ${
                   router.pathname === '/contact' ? 'link-active' : ''
                 }`}
               >

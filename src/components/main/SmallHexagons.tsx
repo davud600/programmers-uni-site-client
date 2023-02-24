@@ -51,6 +51,24 @@ const SmallHexagons = ({ wrapper }: { wrapper: any }) => {
         wrapper={wrapper}
         classes="hexagon-eight w-20"
       />
+      <Hexagon
+        initialRotation={12}
+        z={-4}
+        wrapper={wrapper}
+        classes="hexagon-nine w-20"
+      />
+      <Hexagon
+        initialRotation={18}
+        z={-9}
+        wrapper={wrapper}
+        classes="hexagon-ten w-24"
+      />
+      <Hexagon
+        initialRotation={4}
+        z={-12}
+        wrapper={wrapper}
+        classes="hexagon-eleven w-16"
+      />
     </div>
   );
 };
