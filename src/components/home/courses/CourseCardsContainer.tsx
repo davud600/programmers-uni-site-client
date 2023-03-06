@@ -1,8 +1,8 @@
 import AnimateLeft from '@/components/animations/AnimateLeft';
 import AnimateRight from '@/components/animations/AnimateRight';
 import AnimateUp from '@/components/animations/AnimateUp';
-import CourseCard from '@/components/courses/CourseCard';
-import type { Course } from '@/components/courses/CourseIterface';
+import CourseCard from '@/components/home/courses/CourseCard';
+import type { Course } from '@/components/home/courses/CourseInterface';
 
 const courseFirst: Course = {
   title: 'Java',
@@ -12,7 +12,7 @@ const courseFirst: Course = {
 const courseSecond: Course = {
   title: 'Web Development',
   details:
-    'Essential Web Developer skills: git, HTML, CSS, javascript, PHP, Node.js, Ract.js, tailwind',
+    'Essential Web Developer skills: git, HTML, CSS, javascript, Next js (React), tailwind, Node.js',
   type: 'second',
 };
 const courseThird: Course = {

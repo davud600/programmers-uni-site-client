@@ -1,4 +1,4 @@
-import type { Course } from '@/components/courses/CourseIterface';
+import type { Course } from '@/components/home/courses/CourseInterface';
 
 const CourseCard = ({ course }: { course: Course }) => {
   return (
